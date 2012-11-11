@@ -46,7 +46,7 @@ public class CSVParserTest {
 	}
 
 	/**
-	 * {@link jp.ne.kazuaki.util.CSVParser#parse(java.lang.String)} ‚Ì‚½‚ß‚ÌƒeƒXƒgEƒƒ\ƒbƒhB
+	 * {@link jp.ne.kazuaki.util.CSVParser#parse(java.lang.String)} ã®ãŸã‚ã®ãƒ†ã‚¹ãƒˆãƒ»ãƒ¡ã‚½ãƒƒãƒ‰ã€‚
 	 */
 	@Test
 	public void testParse1() {
@@ -153,13 +153,13 @@ public class CSVParserTest {
 	public void testParse6() {
 		method_name = "testParse6";
 		
-		String arg = " aaa ,bbb,\"12, 345\",ccc\"\",‚ ‚¢‚¤‚¦‚¨999,,\"\"\"\"\"\",abc\"\"def,ghk,\"aaa,123\",\"999,999,999\"";
+		String arg = " aaa ,bbb,\"12, 345\",ccc\"\",ã‚ã„ã†ãˆãŠ999,,\"\"\"\"\"\",abc\"\"def,ghk,\"aaa,123\",\"999,999,999\"";
 		List<String> expect = new ArrayList<String>();
 		expect.add("aaa");
 		expect.add("bbb");
 		expect.add("12, 345");
 		expect.add("ccc\"\"");
-		expect.add("‚ ‚¢‚¤‚¦‚¨999");
+		expect.add("ã‚ã„ã†ãˆãŠ999");
 		expect.add("");
 		expect.add("\"\"");
 		expect.add("abc\"\"def");

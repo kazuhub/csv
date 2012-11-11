@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * CSV‚ğ‰ğÍ‚·‚éƒNƒ‰ƒX
+ * CSVã‚’è§£æã™ã‚‹ã‚¯ãƒ©ã‚¹
  */
 public class CSVParser {
 	private final Character COMMA = ',';
@@ -18,15 +18,15 @@ public class CSVParser {
 	}
 
 	/**
-	 * CSV‚Ì•¶š—ñ‚ğ‰ğÍ‚µAƒŠƒXƒg‚Å•Ô‚µ‚Ü‚·
-	 * ‰ğÍ‰Â”\‚È•¶š—ñ‚ÍˆÈ‰º‚Ì‚Æ‚¨‚è
-	 *   ‚PDƒJƒ“ƒ}‹æØ‚è
-	 *   ‚QD•¶š—ñ‚É‰üs‚ÍŠÜ‚Ü‚È‚¢
-	 *   ‚RDƒJƒ“ƒ}‚ğ‹æØ‚è‚Å‚È‚­•¶š—ñ‚Æ‚µ‚Äˆµ‚¤ê‡A—v‘f‚ğu"vƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ÅˆÍ‚ŞBiƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ğœ‚¢‚½‚à‚Ì‚ğ•Ô‚µ‚Ü‚·)
-	 *   ‚SDƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ÅˆÍ‚Ü‚ê‚½—v‘f“à‚Éƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ğŠÜ‚ß‚éê‡A""‚ÅƒGƒXƒP[ƒv‚·‚éB
-	 * @param str ‰ğÍ‚·‚é•¶š—ñ
-	 * @return ‰ğÍŒã‚ÌƒŠƒXƒg
-	 * @throws CSVParseException ‰ğÍ•s”\‚Èê‡Exception(ƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ª•Â‚¶‚ç‚ê‚Ä‚¢‚È‚¢ê‡)
+	 * CSVã®æ–‡å­—åˆ—ã‚’è§£æã—ã€ãƒªã‚¹ãƒˆã§è¿”ã—ã¾ã™
+	 * è§£æå¯èƒ½ãªæ–‡å­—åˆ—ã¯ä»¥ä¸‹ã®ã¨ãŠã‚Š
+	 *   ï¼‘ï¼ã‚«ãƒ³ãƒåŒºåˆ‡ã‚Š
+	 *   ï¼’ï¼æ–‡å­—åˆ—ã«æ”¹è¡Œã¯å«ã¾ãªã„
+	 *   ï¼“ï¼ã‚«ãƒ³ãƒã‚’åŒºåˆ‡ã‚Šã§ãªãæ–‡å­—åˆ—ã¨ã—ã¦æ‰±ã†å ´åˆã€è¦ç´ ã‚’ã€Œ"ã€ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã§å›²ã‚€ã€‚ï¼ˆãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é™¤ã„ãŸã‚‚ã®ã‚’è¿”ã—ã¾ã™)
+	 *   ï¼”ï¼ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã§å›²ã¾ã‚ŒãŸè¦ç´ å†…ã«ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’å«ã‚ã‚‹å ´åˆã€""ã§ã‚¨ã‚¹ã‚±ãƒ¼ãƒ—ã™ã‚‹ã€‚
+	 * @param str è§£æã™ã‚‹æ–‡å­—åˆ—
+	 * @return è§£æå¾Œã®ãƒªã‚¹ãƒˆ
+	 * @throws CSVParseException è§£æä¸èƒ½ãªå ´åˆException(ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãŒé–‰ã˜ã‚‰ã‚Œã¦ã„ãªã„å ´åˆ)
 	 */
 	public List<String> parse(String str) throws CSVParseException {
 		if (str == null || str.isEmpty()) { return null;}
@@ -35,15 +35,15 @@ public class CSVParser {
 	}
 	
 	/**
-	 * •¶š—ñ‚ğ‰ğÍ‚µAListŒ`®‚É‚·‚éB
-	 * @param str ‰ğÍ‚·‚é•¶š—ñ
-	 * @return ‰ğÍŒã‚ÌList
+	 * æ–‡å­—åˆ—ã‚’è§£æã—ã€Listå½¢å¼ã«ã™ã‚‹ã€‚
+	 * @param str è§£æã™ã‚‹æ–‡å­—åˆ—
+	 * @return è§£æå¾Œã®List
 	 */
 	private List<String> parseList(String str) throws CSVParseException {
 		List<String> result = new ArrayList<String>();
 		Boolean isClose = false;
-		Boolean isDoubleQuoteMode = false;	// ƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“ƒ‚[ƒh
-		int numOfDoubleQuote = 0;			// ƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ÌŒÂ”
+		Boolean isDoubleQuoteMode = false;	// ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãƒ¢ãƒ¼ãƒ‰
+		int numOfDoubleQuote = 0;			// ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã®å€‹æ•°
 		Character c = null;
 		StringBuffer tmp = new StringBuffer();
 		
@@ -52,10 +52,10 @@ public class CSVParser {
 			
 			if (c == DOUBLE_QUOTE) {
 				numOfDoubleQuote++;
-				// •¶š‚ğ˜AŒ‹
+				// æ–‡å­—ã‚’é€£çµ
 				tmp.append(String.valueOf(c));
 				
-				// closeó‘Ô‚Åƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“¨ƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“ƒ‚[ƒh
+				// closeçŠ¶æ…‹ã§ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³â†’ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãƒ¢ãƒ¼ãƒ‰
 				if (isClose) {
 					isDoubleQuoteMode = true;
 					
@@ -64,7 +64,7 @@ public class CSVParser {
 				}	
 			} else if (c == COMMA) {
 				if (isDoubleQuoteMode) {
-					// ƒ_ƒuƒ‹ƒNƒH[ƒg‚Ì”‚ª‹ô”¨close
+					// ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒˆã®æ•°ãŒå¶æ•°â†’close
 					if (numOfDoubleQuote % 2 == 0) {
 						isClose = true;
 					}
@@ -73,32 +73,32 @@ public class CSVParser {
 				}
 				
 				if (isClose) {
-					// —v‘f’Ç‰Á‚µ‚ÄV‚µ‚¢—v‘f‚Ö
+					// è¦ç´ è¿½åŠ ã—ã¦æ–°ã—ã„è¦ç´ ã¸
 					result.add(convert(tmp.toString()));
 					
-					// ‰Šú‰»
+					// åˆæœŸåŒ–
 					numOfDoubleQuote = 0;
 					isDoubleQuoteMode = false;
 					tmp = new StringBuffer();
 				} else {
-					// •¶š‚ğ˜AŒ‹
+					// æ–‡å­—ã‚’é€£çµ
 					tmp.append(String.valueOf(c));
 				}
 			} else {
 				// open
 				isClose = false;
 				
-				// •¶š‚ğ˜AŒ‹
+				// æ–‡å­—ã‚’é€£çµ
 				tmp.append(String.valueOf(c));
 			}		
 		}
 		
 		if (str.length() != 0) {
-			// ƒ_ƒuƒ‹ƒNƒH[ƒgƒ‚[ƒh‚ÅÅŒã‚ªƒ_ƒuƒ‹ƒNƒH[ƒg‚Å•Â‚¶‚ç‚ê‚Ä‚¢‚È‚¢ê‡ƒGƒ‰[
+			// ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒˆãƒ¢ãƒ¼ãƒ‰ã§æœ€å¾ŒãŒãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒˆã§é–‰ã˜ã‚‰ã‚Œã¦ã„ãªã„å ´åˆã‚¨ãƒ©ãƒ¼
 			if (isDoubleQuoteMode && numOfDoubleQuote % 2 != 0) {
-				throw new CSVParseException("CSV‚Ì‰ğÍ’†‚ÉƒGƒ‰[‚ª”­¶‚µ‚Ü‚µ‚½Bƒ_ƒuƒ‹ƒNƒH[ƒg‚Å•Â‚¶‚ç‚ê‚Ä‚¢‚Ü‚¹‚ñB");
+				throw new CSVParseException("CSVã®è§£æä¸­ã«ã‚¨ãƒ©ãƒ¼ãŒç™ºç”Ÿã—ã¾ã—ãŸã€‚ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒˆã§é–‰ã˜ã‚‰ã‚Œã¦ã„ã¾ã›ã‚“ã€‚");
 			}
-			// ÅŒã‚Ì—v‘f’Ç‰Á
+			// æœ€å¾Œã®è¦ç´ è¿½åŠ 
 			result.add(convert(tmp.toString()));
 		}
 		
@@ -106,15 +106,15 @@ public class CSVParser {
 	}
 	
 	/**
-	 * •¶š—ñ‚Ì•ÏŠ·ˆ—‚ğs‚¤
-	 * E‘OŒã‚Ì‹ó”’‚ğœ‹
-	 * E‘OŒã‚Ìƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ğœ‹
-	 * E‘OŒã‚ªƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ÅˆÍ‚Ü‚ê‚Ä‚¢‚éê‡‚ÍA—v‘f“à‚Ì‚Qd‚Ìƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ğ1‚Â‚É‚·‚éB
-	 * —á) "aaa""aaa"¨aaa"aaa
-	 *    ‚½‚¾‚µA‘OŒã‚ªƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ÅˆÍ‚Ü‚ê‚Ä‚¢‚È‚¢ê‡‚ÍAˆ—‚µ‚È‚¢B
-	 *    —á) aaa""aaa¨aaa""aaa
-	 * @param str •ÏŠ·‚·‚é•¶š—ñ
-	 * @return •ÏŠ·Œã‚Ì•¶š—ñ
+	 * æ–‡å­—åˆ—ã®å¤‰æ›å‡¦ç†ã‚’è¡Œã†
+	 * ãƒ»å‰å¾Œã®ç©ºç™½ã‚’é™¤å»
+	 * ãƒ»å‰å¾Œã®ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’é™¤å»
+	 * ãƒ»å‰å¾ŒãŒãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã§å›²ã¾ã‚Œã¦ã„ã‚‹å ´åˆã¯ã€è¦ç´ å†…ã®ï¼’é‡ã®ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’1ã¤ã«ã™ã‚‹ã€‚
+	 * ä¾‹) "aaa""aaa"â†’aaa"aaa
+	 *    ãŸã ã—ã€å‰å¾ŒãŒãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã§å›²ã¾ã‚Œã¦ã„ãªã„å ´åˆã¯ã€å‡¦ç†ã—ãªã„ã€‚
+	 *    ä¾‹) aaa""aaaâ†’aaa""aaa
+	 * @param str å¤‰æ›ã™ã‚‹æ–‡å­—åˆ—
+	 * @return å¤‰æ›å¾Œã®æ–‡å­—åˆ—
 	 */
 	private String convert(String str) {
 		String r = str.trim();
@@ -122,7 +122,7 @@ public class CSVParser {
 		if (str.startsWith(doubleQuote) && str.endsWith(doubleQuote)) {
 			r = str.substring(1, str.length() -1);
 			
-			// ‚Qd‚Ìƒ_ƒuƒ‹ƒNƒH[ƒe[ƒVƒ‡ƒ“‚ğ1‚Â‚É’uŠ·
+			// ï¼’é‡ã®ãƒ€ãƒ–ãƒ«ã‚¯ã‚©ãƒ¼ãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã‚’1ã¤ã«ç½®æ›
 			r = r.replaceAll(doubleQuote.concat(doubleQuote), doubleQuote);
 		}
 		
