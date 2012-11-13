@@ -177,6 +177,35 @@ public class CSVParserTest {
 		}
 	}
 
+	@Test
+	public void testParse7() {
+		method_name = "testParse7";
+		
+		String arg = " aaa ,bbb,\"12, 345\",ccc\"\",あいうえお999,,\"\"\"\"\"\",abc\"\"def,ghk,\"aaa,123\",\"999,999,999\"";
+		List<String> expect = new ArrayList<String>();
+		expect.add("aaa");
+		expect.add("bbb");
+		expect.add("\"12, 345\"");
+		expect.add("ccc\"\"");
+		expect.add("あいうえお999");
+		expect.add("");
+		expect.add("\"\"\"\"");
+		expect.add("abc\"\"def");
+		expect.add("ghk");
+		expect.add("\"aaa,123\"");
+		expect.add("\"999,999,999\"");
+		
+		try {
+			parser.setFrontRearDQuoteRemoveMode(false);
+			List<String> l = parser.parse(arg);
+			
+			assertEquals(expect, l);
+		} catch (CSVParseException e) {
+			e.printStackTrace();
+			assertFalse(true);
+		}
+	}
+
 	
 	public void print(String str) {
 		System.out.println(str);

@@ -12,6 +12,11 @@ import java.util.List;
 public class CSVParser {
 	private final Character COMMA = ',';
 	private final Character DOUBLE_QUOTE = '"';
+
+	/**
+	 * 前後のダブルクォートを取り除くモード
+	 */
+	private boolean frontRearDQuoteRemoveMode = true;
 	
 	public CSVParser() {
 		super();
@@ -33,7 +38,23 @@ public class CSVParser {
 		
 		return parseList(str);
 	}
+
+	/**
+	 *  解析後、値の前後のダブルクォートを取り除くモードであるかを返す。
+	 *  @return 今の値の前後のダブルクォートを取り除くモード状態
+	 */
+	public boolean isFrontRearDQuoteRemoveMode() {
+		return frontRearDQuoteRemoveMode;
+	}
 	
+	/**
+	 * 解析後、値の前後のダブルクォートを取り除くモード設定
+	 * @param mode モード(true：ダブルクォート取り除くモード、false：ダブルクォート取り除かないモード)
+	 */
+	public void setFrontRearDQuoteRemoveMode(boolean mode) {
+		frontRearDQuoteRemoveMode = mode;
+	}
+
 	/**
 	 * 文字列を解析し、List形式にする。
 	 * @param str 解析する文字列
@@ -124,6 +145,10 @@ public class CSVParser {
 			
 			// ２重のダブルクォーテーションを1つに置換
 			r = r.replaceAll(doubleQuote.concat(doubleQuote), doubleQuote);
+			// modeがダブルクォートを取り除くモードでないならダブルクォート付与
+			if (!isFrontRearDQuoteRemoveMode()) {
+				r = doubleQuote.concat(r).concat(doubleQuote);
+			}
 		}
 		
 		return r;
